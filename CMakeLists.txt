@@ -3,6 +3,8 @@ add_library(pico-st7735 INTERFACE)
 target_sources(pico-st7735 INTERFACE
     ${CMAKE_CURRENT_LIST_DIR}/adafruit-st7735.cpp
     ${CMAKE_CURRENT_LIST_DIR}/adafruit-st7735.h
+    ${CMAKE_CURRENT_LIST_DIR}/functions-st7735.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/functions-st7735.h
 )
 
 target_include_directories(pico-st7735 INTERFACE

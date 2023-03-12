@@ -4,41 +4,33 @@ void testlines(st7735 *st, uint16_t color) {
   gfx_fillScreen(st->gfx, ST77XX_BLACK);
   for (int16_t x=0; x < gfx_width(st->gfx); x+=6) {
     gfx_drawLine(st->gfx, 0, 0, x, gfx_height(st->gfx)-1, color);
-    delay(0);
   }
-  for (int16_t y=0; y < gfx_height(); y+=6) {
+  for (int16_t y=0; y < gfx_height(st->gfx); y+=6) {
     gfx_drawLine(st->gfx, 0, 0, gfx_width(st->gfx)-1, y, color);
-    delay(0);
   }
 
   gfx_fillScreen(st->gfx, ST77XX_BLACK);
   for (int16_t x=0; x < gfx_width(st->gfx); x+=6) {
     gfx_drawLine(st->gfx, gfx_width(st->gfx)-1, 0, x, gfx_height(st->gfx)-1, color);
-    delay(0);
   }
   for (int16_t y=0; y < gfx_height(st->gfx); y+=6) {
     gfx_drawLine(st->gfx, gfx_width(st->gfx)-1, 0, 0, y, color);
-    delay(0);
   }
 
   gfx_fillScreen(st->gfx, ST77XX_BLACK);
   for (int16_t x=0; x < gfx_width(st->gfx); x+=6) {
     gfx_drawLine(st->gfx, 0, gfx_height(st->gfx)-1, x, 0, color);
-    delay(0);
   }
   for (int16_t y=0; y < gfx_height(st->gfx); y+=6) {
     gfx_drawLine(st->gfx, 0, gfx_height(st->gfx)-1, gfx_width(st->gfx)-1, y, color);
-    delay(0);
   }
 
   gfx_fillScreen(st->gfx, ST77XX_BLACK);
   for (int16_t x=0; x < gfx_width(st->gfx); x+=6) {
     gfx_drawLine(st->gfx, gfx_width(st->gfx)-1, gfx_height(st->gfx)-1, x, 0, color);
-    delay(0);
   }
   for (int16_t y=0; y < gfx_height(st->gfx); y+=6) {
     gfx_drawLine(st->gfx, gfx_width(st->gfx)-1, gfx_height(st->gfx)-1, 0, y, color);
-    delay(0);
   }
 }
 
