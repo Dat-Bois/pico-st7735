@@ -161,13 +161,14 @@ void tftPrintTest(st7735 *st) {
 
 void printData(st7735 *st, double battery) { //String roll, String pitch, String yaw, bool kidnap
   gfx_setTextWrap(st->gfx, false);
-  gfx_fillScreen(st->gfx, ST77XX_BLACK);
+  //gfx_fillScreen(st->gfx, ST77XX_BLACK);
   gfx_setCursor(st->gfx, 0, 30);
-  gfx_setTextColor(st->gfx, ST77XX_WHITE);
+  //gfx_setTextColor(st->gfx, ST77XX_WHITE);
+  gfx_setTextAndBackgroundColor(st->gfx, ST77XX_WHITE, ST77XX_BLACK);
   gfx_setTextSize(st->gfx, 1);
   gfx_print(st->gfx, "Batt Voltage: ");
-  gfx_setTextColor(st->gfx, ST77XX_YELLOW);
-  gfx_println_d(st->gfx, battery);
+  gfx_setTextAndBackgroundColor(st->gfx, ST77XX_YELLOW, ST77XX_BLACK);
+  gfx_println_d_digits(st->gfx, battery, 3);
   gfx_println(st->gfx, "");
 }
 
