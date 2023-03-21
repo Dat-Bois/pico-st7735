@@ -162,17 +162,18 @@ void tftPrintTest(st7735 *st) {
 void printHelper(st7735 *st, char *text, double value, int digits, uint16_t c1, uint16_t c2) {
   gfx_setTextAndBackgroundColor(st->gfx, c1, ST77XX_BLACK);
   gfx_setTextSize(st->gfx, 1);
+  gfx_print(st->gfx, " ");
   gfx_print(st->gfx, text);
   gfx_setTextAndBackgroundColor(st->gfx, c2, ST77XX_BLACK);
   gfx_print_d_digits(st->gfx, value, digits);
-  gfx_println(st->gfx, "      ");
+  gfx_println(st->gfx, "                              ");
   gfx_println(st->gfx, " ");
 }
 
 
 void printData(st7735 *st, double battery, double roll, double pitch, double yaw, bool kidnap) { 
   gfx_setTextWrap(st->gfx, false);
-  gfx_setCursor(st->gfx, 5, 30);
+  gfx_setCursor(st->gfx, 0, 30);
   printHelper(st, (char*)"Batt Volt: ", battery, 3, ST77XX_WHITE, ST77XX_YELLOW);
   printHelper(st, (char*)"Roll: ", roll, 4, ST77XX_RED, ST77XX_WHITE);
   printHelper(st, (char*)"Pitch: ", pitch, 4, ST77XX_GREEN, ST77XX_WHITE);
