@@ -22,7 +22,7 @@ void testdrawcircles(st7735 *st, uint8_t radius, uint16_t color);
 void testtriangles(st7735 *st);
 void testroundrects(st7735 *st);
 void tftPrintTest(st7735 *st);
-void printData(st7735 *st, double battery, double roll, double pitch, double yaw, bool kidnap);
+void printData(st7735 *st, double battery, double roll, double pitch, double yaw);
 
 #ifdef __cplusplus
 }

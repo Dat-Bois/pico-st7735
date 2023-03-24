@@ -171,7 +171,7 @@ void printHelper(st7735 *st, char *text, double value, int digits, uint16_t c1, 
 }
 
 
-void printData(st7735 *st, double battery, double roll, double pitch, double yaw, bool kidnap) { 
+void printData(st7735 *st, double battery, double roll, double pitch, double yaw) { 
   gfx_setTextWrap(st->gfx, false);
   gfx_setCursor(st->gfx, 0, 30);
   printHelper(st, (char*)"Batt Volt: ", battery, 3, ST77XX_WHITE, ST77XX_YELLOW);
